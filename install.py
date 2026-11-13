@@ -9,7 +9,7 @@ bin_dir = Path.home() / '.local/bin'
 app_dir = Path.home() / '.local/share/applications'
 for directory in (destination, bin_dir, app_dir):
     directory.mkdir(parents=True, exist_ok=True)
-for name in ('womic.py', 'gui.py', 'firewall.py', 'README.md', 'THIRD_PARTY_LICENSE.txt'):
+for name in ('womic.py', 'gui.py', 'firewall.py', 'README.md'):
     shutil.copy2(origin / name, destination / name)
 for name, target in (('womic-wlan', 'gui.py'), ('womic-wlan-cli', 'womic.py'),
                      ('womic-wlan-firewall', 'firewall.py')):
